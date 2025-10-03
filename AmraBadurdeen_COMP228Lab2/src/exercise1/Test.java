@@ -1,7 +1,6 @@
 package exercise1;
 
 import javax.swing.JOptionPane;
-import java.util.Random;
 
 public class Test {
 
@@ -16,8 +15,6 @@ public class Test {
 
             "What is the purpose of the static keyword in Java?\n1) It allows a variable or method to belong to the class rather than instances of the class\n2) It makes a variable read-only\n3) It deletes the object after use\n4) It converts a method to a constructor"
     };
-
-    private Random random = new Random(); //for random message
 
     private int[] answers = {2, 1, 1, 2, 1}; //answers for the questions
     private int correctCount = 0; //collects no. of correct answers
@@ -60,7 +57,7 @@ public class Test {
 
     public String generateMessage(boolean correct) {
         if (correct) {
-            switch (random.nextInt(4)) {
+            switch ((int)(Math.random() * 4)) {
                 case 0:
                     return ("Excellent!");
                 case 1:
@@ -72,7 +69,7 @@ public class Test {
             }
         }
         else {
-            switch (random.nextInt(4)) {
+            switch ((int)(Math.random() * 4)) {
                 case 0:
                     return ("No. Please try again.");
                 case 1:
