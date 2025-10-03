@@ -18,6 +18,13 @@ public class Lotto {
         return numbers;
     }
 
+    //calculate sum of numbers
+    public int getSum() {
+        int sum = 0;
+        for (int n : numbers) sum += n;
+        return sum;
+    }
+
     //Lotto logic
     public void playGame() {
         int userInput = 0;
@@ -45,11 +52,7 @@ public class Lotto {
 
             Lotto lotto = new Lotto();
             int[] lottoNumbers = lotto.getNumbers();
-            int sum = 0;
-
-            for (int j : lottoNumbers) {
-                sum += j;
-            }
+            int sum = lotto.getSum();
 
             JOptionPane.showMessageDialog(null,
                     "Roll " + i + ": " + lottoNumbers[0] + ", " + lottoNumbers[1] + ", "
