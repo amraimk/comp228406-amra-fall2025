@@ -1,24 +1,38 @@
 import exercise1.Test;
 import exercise2.Lotto;
 import exercise3.CalculateArea;
+import javax.swing.JOptionPane;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
-        //Test class
-        Test test = new Test();  //Test object
-//        test.inputAnswer();
+        while (true) {
+            String choice = JOptionPane.showInputDialog(
+                    "Enter the program to run:\n1) Java Test\n2) Lotto Game\n3) CalculateArea\n4) Exit");
 
-        //Lotto class
-        Lotto lotto = new Lotto();
-//        lotto.playGame();
+            if (choice == null || choice.equals("4")) {
+                JOptionPane.showMessageDialog(null, "Exiting program");
+                break;
+            }
 
-        //CalculateArea class
-        CalculateArea areas = new CalculateArea();
-        System.out.println("Area of square: " + areas.area(5));
-        System.out.println("Area of rectangle: " + areas.area(4, 6));
-        System.out.println("Area of triangle: " + areas.area(3.0, 4.0));
+            if (choice.equals("1")) {
+                Test test = new Test();
+                test.inputAnswer();
+            }
+            else if (choice.equals("2")) {
+                Lotto lotto = new Lotto();
+                lotto.playGame();
+            }
+            else if (choice.equals("3")) {
+                CalculateArea areas = new CalculateArea();
+                JOptionPane.showMessageDialog(null,
+                        "Area of square (5): " + areas.area(5) +
+                                "\nArea of rectangle (4, 6): " + areas.area(4, 6) +
+                                "\nArea of triangle (3.0, 4.0): " + areas.area(3.0, 4.0));
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Invalid choice! Please try again.");
+            }
+        }
     }
 }
