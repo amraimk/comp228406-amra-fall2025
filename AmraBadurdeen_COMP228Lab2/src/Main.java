@@ -16,14 +16,17 @@ public class Main {
             }
 
             if (choice.equals("1")) {
+                //Test class
                 Test test = new Test();
                 test.inputAnswer();
             }
             else if (choice.equals("2")) {
+                //Lotto class
                 Lotto lotto = new Lotto();
                 lotto.playGame();
             }
             else if (choice.equals("3")) {
+                //CalculateArea class
                 CalculateArea areas = new CalculateArea();
                 JOptionPane.showMessageDialog(null,
                         "Area of square (5): " + areas.area(5) +
