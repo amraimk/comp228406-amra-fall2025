@@ -15,3 +15,5 @@ public abstract class Insurance {
     public abstract void setInsuranceCost(double cost);
     public abstract void displayInfo();
 }
+
+
