@@ -6,9 +6,4 @@ public class PersonalMortgage extends Mortgage {
         super(mortgageNumber, customerName, mortgageAmount, term);
         setInterestRate(primeRate + 2.0);
     }
-
-    @Override
-    public double getInterestRate() {
-        return interestRate;
-    }
 }

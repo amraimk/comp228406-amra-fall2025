@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class ProcessMortgage {
     public static void main(String[] args) {
 
-        int size = 3; // Array of 3
+        int size = 3; //Array of 3
         Mortgage[] mortgages = new Mortgage[size];
 
         double primeRate = Double.parseDouble(JOptionPane.showInputDialog("Enter current prime rate:"));
@@ -36,10 +36,10 @@ public class ProcessMortgage {
             count++;
         }
 
-        // Display all mortgage info
+        //Display all mortgage info
         StringBuilder output = new StringBuilder("CityToronto Bank Mortgages:\n\n");
         for (Mortgage m : mortgages) {
-            output.append(m.getMortgageInfo()).append("\n");
+            output.append(m.getMortgageInfo()).append("\n\n");
         }
 
         JOptionPane.showMessageDialog(null, output.toString());

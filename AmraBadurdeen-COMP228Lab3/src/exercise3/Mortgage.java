@@ -29,14 +29,6 @@ public abstract class Mortgage implements MortgageConstants {
         this.interestRate = interestRate;
     }
 
-    public int getMortgageNumber() { return mortgageNumber; }
-    public String getCustomerName() { return customerName; }
-    public double getMortgageAmount() { return mortgageAmount; }
-    public int getTerm() { return term; }
-
-
-    public abstract double getInterestRate();
-
     public double calculateTotalOwed() {
         return mortgageAmount + (mortgageAmount * (interestRate / 100) * term);
     }

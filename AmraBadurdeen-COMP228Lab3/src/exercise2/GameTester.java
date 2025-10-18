@@ -22,7 +22,7 @@ public abstract class GameTester {
 
     @Override
     public String toString() {
-        return String.format("Game Tester: %s%nStatus: %s",
-                getName(), isFullTime ? "Full-time" : "Part-time");
+        return String.format("Game Tester: %s%nStatus: %s", getName(),
+                isFullTime ? "Full-time" : "Part-time");
     }
 }

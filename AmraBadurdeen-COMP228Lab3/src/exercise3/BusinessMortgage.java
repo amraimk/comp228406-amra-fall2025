@@ -6,9 +6,4 @@ public class BusinessMortgage extends Mortgage {
         super(mortgageNumber, customerName, mortgageAmount, term);
         setInterestRate(primeRate + 1.0);
     }
-
-    @Override
-    public double getInterestRate() {
-        return interestRate;
-    }
 }
