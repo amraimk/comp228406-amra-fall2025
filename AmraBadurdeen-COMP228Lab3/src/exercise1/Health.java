@@ -4,7 +4,7 @@ package exercise1;
 public class Health extends Insurance {
 
     public Health() {
-        this.insuranceType = "Health Insurance";
+        super("Health Insurance", 0);
     }
 
     @Override
@@ -13,8 +13,9 @@ public class Health extends Insurance {
     }
 
     @Override
-    public void displayInfo() {
-        System.out.println("Insurance Type: " + insuranceType);
-        System.out.println("Monthly Cost: $" + monthlyCost);
+    public String getInsuranceInfo() {
+        return "Insurance Type: " + insuranceType +
+                "\nMonthly Cost: $" + monthlyCost +
+                "\n---------------------------";
     }
 }

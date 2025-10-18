@@ -37,9 +37,7 @@ public class DriveTest {
         StringBuilder output = new StringBuilder("Insurance Policies:\n\n");
 
         for (Insurance current : insurances) {
-            output.append("Type: ").append(current.getInsuranceType())
-                    .append("\nMonthly Fee: $").append(current.getMonthlyCost())
-                    .append("\n\n");
+            output.append(current.getInsuranceInfo()).append("\n\n");
         }
         JOptionPane.showMessageDialog(null, output.toString());
     }
