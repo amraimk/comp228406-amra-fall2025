@@ -14,36 +14,28 @@ public class StudentController {
     @FXML private ListView<String> listCourses;
     @FXML private TextArea stDisplay;
 
-    private ToggleGroup majorGroup = new ToggleGroup();
-
-    private ObservableList<String> cScienceCourses = FXCollections.observableArrayList("Java", "Python", "C#", "PHP", "Database");
-    private ObservableList<String> businessCourses = FXCollections.observableArrayList("Accounting", "Marketing", "Finance");
-
     @FXML
     public void initialize() {
-        //toggle group
-        rbCScience.setToggleGroup(majorGroup);
-        rbBusiness.setToggleGroup(majorGroup);
-
-        //Default to Computer Science
+        //set default to Computer Science
         rbCScience.setSelected(true);
-        cbSelectMajor.setItems(cScienceCourses);
+        cbSelectMajor.setItems(FXCollections.observableArrayList("Java", "Python", "C#", "PHP", "Database"));
 
-        //Change courses when major changes
-        majorGroup.selectedToggleProperty().addListener((obs, oldToggle, newToggle) -> {
-            if (newToggle == rbCScience) {
-                cbSelectMajor.setItems(cScienceCourses);
-            } else {
-                cbSelectMajor.setItems(businessCourses);
-            }
+        //Update courses when RadioButton is clicked
+        rbCScience.setOnAction(e -> {
+            cbSelectMajor.setItems(FXCollections.observableArrayList("Java", "Python", "C#", "PHP", "Database"));
             listCourses.getItems().clear();
         });
 
-        //Add course to ListView if not added
+        rbBusiness.setOnAction(e -> {
+            cbSelectMajor.setItems(FXCollections.observableArrayList("Accounting", "Marketing", "Finance"));
+            listCourses.getItems().clear();
+        });
+
+        //Add selected course to ListView
         cbSelectMajor.setOnAction(e -> {
-            String selected = cbSelectMajor.getValue();
-            if (selected != null && !listCourses.getItems().contains(selected)) {
-                listCourses.getItems().add(selected);
+            String course = cbSelectMajor.getValue();
+            if (course != null && !listCourses.getItems().contains(course)) {
+                listCourses.getItems().add(course);
             }
         });
     }
