@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.mylabs.amrajavafxlab4.StudentController"
+          hgap="10" vgap="10" alignment="TOP_LEFT">
+
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <GridPane GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="1" hgap="25" vgap="10">
+        <VBox spacing="5" GridPane.rowIndex="0" GridPane.columnIndex="0">
+
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label text="Name:" prefWidth="100"/>
+                <TextField fx:id="stName" prefWidth="180" minHeight="30" maxHeight="30"/>
+            </HBox>
+
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label text="Address:" prefWidth="100"/>
+                <TextField fx:id="stAddress" prefWidth="180" minHeight="30" maxHeight="30"/>
+            </HBox>
+
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label text="City:" prefWidth="100"/>
+                <TextField fx:id="stCity" prefWidth="180" minHeight="30" maxHeight="30"/>
+            </HBox>
+
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label text="Province:" prefWidth="100"/>
+                <TextField fx:id="stProvince" prefWidth="180" minHeight="30" maxHeight="30"/>
+            </HBox>
+
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label text="Postal Code:" prefWidth="100"/>
+                <TextField fx:id="stPostal" prefWidth="180" minHeight="30" maxHeight="30"/>
+            </HBox>
+
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label text="Phone:" prefWidth="100"/>
+                <TextField fx:id="stPhone" prefWidth="180" minHeight="30" maxHeight="30"/>
+            </HBox>
+
+            <HBox spacing="5" alignment="CENTER_LEFT">
+                <Label text="Email:" prefWidth="100"/>
+                <TextField fx:id="stEmail" prefWidth="180" minHeight="30" maxHeight="30"/>
+            </HBox>
+        </VBox>
+
+        <VBox spacing="40" GridPane.rowIndex="0" GridPane.columnIndex="1">
+            <VBox spacing="10" >
+                <children>
+                    <CheckBox fx:id="studentCouncil" text="Student Council"/>
+                    <CheckBox fx:id="volunteerWork" text="Volunteer Work"/>
+                </children>
+            </VBox>
+        </VBox>
+
+        <VBox spacing="10" GridPane.rowIndex="0" GridPane.columnIndex="2">
+            <HBox spacing="10" >
+                <children>
+                    <RadioButton fx:id="rbCScience" text="Computer Science"/>
+                    <RadioButton fx:id="rbBusiness" text="Business"/>
+                </children>
+            </HBox>
+
+            <VBox spacing="10" >
+                <children>
+                    <ComboBox fx:id="cbSelectMajor" prefWidth="200"/>
+                    <ListView fx:id="listCourses" prefHeight="100"/>
+                </children>
+            </VBox>
+        </VBox>
+    </GridPane>
+
+    <Button text="Display Information"
+            onAction="#onDisplay"
+            GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="3"
+            GridPane.halignment="CENTER" prefHeight="40" minHeight="40" maxHeight="40"/>
+
+    <TextArea fx:id="stDisplay" prefHeight="150" prefWidth="300"
+              GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+</GridPane>
