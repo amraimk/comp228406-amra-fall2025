@@ -1,15 +1,26 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
-    }
-}
+// PlayerGameGUI.java
+//import javax.swing.*;
+//
+//public class GUIPanels extends JFrame {
+//
+//    public GUIPanels() {
+//        setTitle("db.Player-db.Game App");
+//        setSize(750, 550);
+//        setDefaultCloseOperation(EXIT_ON_CLOSE);
+//        setLocationRelativeTo(null);
+//
+//        JTabbedPane tabbedPane = new JTabbedPane();
+//
+//        tabbedPane.add("Add db.Game", new AddGamePanel());
+//        tabbedPane.add("Add db.Player", new AddPlayerPanel());
+//        tabbedPane.add("Update db.Player", new UpdatePlayerPanel());
+//        tabbedPane.add("Record db.Game", new RecordGamePanel());
+//        tabbedPane.add("db.Player Report", new PlayerReportPanel());
+//
+//        add(tabbedPane);
+//    }
+//
+//    public static void main(String[] args) {
+//        SwingUtilities.invokeLater(() -> new PlayerGameGUI().setVisible(true));
+//    }
+//}
