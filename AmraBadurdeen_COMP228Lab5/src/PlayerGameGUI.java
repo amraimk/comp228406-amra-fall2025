@@ -10,7 +10,7 @@ import db.DBPlayerGame;
 public class PlayerGameGUI extends JFrame {
 
     public PlayerGameGUI() {
-        setTitle("db.Player-db.Game App");
+        setTitle("Player Game App");
         setSize(700,500);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
